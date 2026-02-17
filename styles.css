@@ -1,0 +1,374 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+
+  background: linear-gradient(
+    to bottom,
+    #0f172a 0%,
+    #020617 100%
+  );
+
+  color: #e5e7eb;
+}
+body.sunny::after,
+body.rainy::after,
+body.cloudy::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+
+body.sunny::after {
+  background: radial-gradient(
+    circle at top,
+    rgba(253, 224, 71, 0.18),
+    transparent 60%
+  );
+}
+
+body.rainy::after {
+  background: linear-gradient(
+    to bottom,
+    rgba(59, 130, 246, 0.18),
+    transparent
+  );
+}
+
+
+body.cloudy::after {
+  background: linear-gradient(
+    to bottom,
+    rgba(203, 213, 225, 0.15),
+    transparent
+  );
+}
+
+
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.6), transparent),
+    radial-gradient(1px 1px at 30% 80%, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1px 1px at 50% 40%, rgba(255,255,255,0.4), transparent),
+    radial-gradient(1px 1px at 70% 60%, rgba(255,255,255,0.6), transparent),
+    radial-gradient(1px 1px at 90% 30%, rgba(255,255,255,0.5), transparent),
+    radial-gradient(2px 2px at 40% 10%, rgba(255,255,255,0.25), transparent);
+  pointer-events: none;
+}
+section {
+  background: rgba(255, 255, 255, 0.94);
+  color: #0f172a;
+  padding: 22px;
+  border-radius: 16px;
+  margin-bottom: 26px;
+
+  box-shadow:
+    0 20px 40px rgba(2, 6, 23, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+
+  backdrop-filter: blur(6px);
+}
+.forecast-placeholder {
+  font-size: 0.85rem;
+  opacity: 0.6;
+  padding: 10px;
+}
+
+
+#cosmos {
+  background:
+    linear-gradient(
+      to right,
+      rgba(15, 23, 42, 0.05),
+      rgba(15, 23, 42, 0.12)
+    ),
+    rgba(255, 255, 255, 0.95);
+}
+section {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+section:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 26px 50px rgba(2, 6, 23, 0.7),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.weather-hero {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.weather-icon {
+  font-size: 3rem;
+}
+
+.weather-temp {
+  font-size: 2.6rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.weather-desc {
+  font-size: 0.95rem;
+  color: #555;
+}
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: 0.95rem;
+}
+
+.aqi-value {
+  font-weight: 600;
+}
+
+
+.chip {
+  display: inline-block;
+  padding: 6px 14px;
+  margin: 6px 8px 0 0;
+  font-size: 0.85rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.08);
+  color: #0f172a;
+  font-weight: 500;
+}
+
+
+.insight {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #333;
+}
+.weather-hero {
+  transition: transform 0.3s ease;
+}
+
+.weather-hero:hover {
+  transform: translateY(-2px);
+}
+.forecast-strip {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+
+.forecast-card {
+  min-width: 90px;
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+
+
+.app {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+header {
+  margin-bottom: 32px;
+}
+
+section {
+  margin-bottom: 24px;
+}
+section {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+section h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  color: #1f2933;
+}
+.weather-main {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.weather-sub {
+  font-size: 0.95rem;
+  color: #555;
+}
+.aqi-good {
+  border-left: 4px solid #22c55e;
+}
+
+.aqi-moderate {
+  border-left: 4px solid #facc15;
+}
+
+.aqi-poor {
+  border-left: 4px solid #ef4444;
+}
+#cosmos {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #333;
+}
+section {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+.weather-hero {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 8px 0;
+}
+
+.weather-icon {
+  font-size: 3.5rem;
+}
+
+.weather-temp {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.weather-desc {
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+section:nth-of-type(1) {
+  border-left: 4px solid #38bdf8; 
+}
+
+section:nth-of-type(2) {
+  border-left: 4px solid #a78bfa; 
+}
+
+section:nth-of-type(3) {
+  border-left: 4px solid #f87171; 
+}
+
+section:nth-of-type(4) {
+  border-left: 4px solid #34d399; 
+}
+
+section:nth-of-type(5) {
+  border-left: 4px solid #facc15; 
+}
+
+section {
+  animation: fadeUp 0.4s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Base forecast card */
+.forecast-card {
+  min-width: 90px;
+  padding: 12px 10px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 0.85rem;
+  background: #f8fafc;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease;
+}
+
+.forecast-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Weather-based colors */
+.forecast-sunny {
+  background: linear-gradient(to bottom, #fde68a, #fef3c7);
+}
+
+.forecast-cloudy {
+  background: linear-gradient(to bottom, #e5e7eb, #f8fafc);
+}
+
+.forecast-rainy {
+  background: linear-gradient(to bottom, #bfdbfe, #e0f2fe);
+}
+
+.forecast-stormy {
+  background: linear-gradient(to bottom, #c7d2fe, #e0e7ff);
+}
+
+.forecast-snowy {
+  background: linear-gradient(to bottom, #e0f2fe, #f8fafc);
+}
+.forecast-today {
+  transform: scale(1.06);
+  border: 2px solid rgba(56, 189, 248, 0.8);
+}
+.forecast-strip {
+  scroll-snap-type: x mandatory;
+}
+
+.forecast-card {
+  scroll-snap-align: start;
+}
+.muted {
+  font-size: 0.8rem;
+  opacity: 0.6;
+  margin-top: -8px;
+  margin-bottom: 8px;
+}
+.estimated {
+  opacity: 0.75;
+  position: relative;
+}
+
+.est-tag {
+  font-size: 0.65rem;
+  margin-top: 4px;
+  opacity: 0.7;
+}
+@media (max-width: 600px) {
+  .weather-hero {
+    gap: 12px;
+  }
+
+  .weather-temp {
+    font-size: 2.4rem;
+  }
+
+  section {
+    padding: 16px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+}

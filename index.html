@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ENVIOmeteor</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <main class="app">
+
+    <header>
+      <h1>ENVIOmeteor</h1>
+      <p id="status">Detecting location…</p>
+    </header>
+
+    <!-- WEATHER -->
+    <section>
+      <h2>Current Weather</h2>
+      <div id="weather">Loading weather…</div>
+    </section>
+
+    <!-- DAY OUTLOOK -->
+    <section>
+      <h2>Day Outlook</h2>
+      <div id="dayOutlook">Loading outlook…</div>
+    </section>
+
+    <!-- AIR QUALITY -->
+    <section>
+      <h2>Air Quality</h2>
+      <div id="aqi">Loading AQI…</div>
+    </section>
+
+    <!-- SUGGESTIONS -->
+    <section>
+      <h2>Today’s Advice</h2>
+      <div id="suggestions">Loading suggestions…</div>
+    </section>
+
+    <!-- COSMOS -->
+    <section>
+      <h2>Tonight’s Sky</h2>
+      <p id="skyInfo">Analyzing sky conditions…</p>
+    </section>
+    <section>
+  <h2>7-Day Forecast</h2>
+<p class="muted">Last 2 days are estimated trends</p>
+
+  <div id="forecastStrip" class="forecast-strip">
+    <div class="forecast-placeholder">Fetching forecast…</div>
+  </div>
+</section>
+
+
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
