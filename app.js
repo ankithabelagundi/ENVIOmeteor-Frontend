@@ -42,9 +42,11 @@ navigator.geolocation.getCurrentPosition(
 
     status.textContent = "Location detected ✅";
 
-    const API_BASE = "https://enviometeor-backend.onrender.com/api/insights";
+    const API_BASE = "https://enviometeor-backend.onrender.com";
 
-    const insightsRes = await fetch(`${API_URL}/api/forecast?lat=${lat}&lon=${lon}`)
+    const insightsRes = await fetch(
+  `${API_BASE}/api/insights?lat=${lat}&lon=${lon}`
+      );
     const data = await insightsRes.json();
 
     const conditionText = data.weather.weather[0].description.toLowerCase();
