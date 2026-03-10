@@ -42,9 +42,11 @@ navigator.geolocation.getCurrentPosition(
 
     status.textContent = "Location detected ✅";
 
+    const API_BASE = "https://enviometeor-backend.onrender.com";
+
     const insightsRes = await fetch(
-      `http://localhost:5000/api/insights?lat=${lat}&lon=${lon}`
-    );
+  `${API_BASE}/api/insights?lat=${lat}&lon=${lon}`
+      );
     const data = await insightsRes.json();
 
     const conditionText = data.weather.weather[0].description.toLowerCase();
@@ -120,7 +122,7 @@ navigator.geolocation.getCurrentPosition(
     }, 300);
 
     if (forecastStrip) {
-      fetch(`http://localhost:5000/api/forecast?lat=${lat}&lon=${lon}`)
+      fetch(`${API_BASE}/api/forecast?lat=${lat}&lon=${lon}`)
         .then(res => res.json())
         .then(forecastData => {
           try {
